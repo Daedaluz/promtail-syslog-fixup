@@ -18,6 +18,7 @@ var (
 )
 
 func main() {
+	flag.Parse()
 	buff := make([]byte, *bufferSize)
 	srv, err := net.ListenPacket("udp", *listen)
 	if err != nil {
